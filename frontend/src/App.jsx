@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
 // ── Backend URL — FastAPI running locally on port 8000 ────────────────────────
-// const BACKEND_URL = "http://localhost:8000";
 const BACKEND_URL = "https://portfolio-y1i9.onrender.com";
 
 const SUGGESTIONS = [
@@ -360,14 +359,14 @@ export default function Portfolio() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: isMobile ? "16px 12px 12px" : "24px 20px 20px",
+          padding: isMobile ? "8px 0 8px" : "24px 20px 20px",
           minHeight: "calc(100vh - 52px)",
         }}>
 
-          <div style={{ textAlign: "center", marginBottom: isMobile ? 18 : 32, animation: "fadeUp 0.5s ease" }}>
+          <div style={{ textAlign: "center", marginBottom: isMobile ? 10 : 32, animation: "fadeUp 0.5s ease" }}>
             <h1 style={{
               fontFamily: "Syne, sans-serif",
-              fontSize: "clamp(24px, 5vw, 52px)",
+              fontSize: isMobile ? "22px" : "clamp(24px, 5vw, 52px)",
               fontWeight: 800, color: "#e2e8f0",
               margin: 0, lineHeight: 1.1, letterSpacing: "-1px",
             }}>
@@ -376,19 +375,19 @@ export default function Portfolio() {
                 Yaswanth
               </span>
             </h1>
-            <p style={{ color: "#334155", fontSize: isMobile ? 10 : 13, marginTop: 10, letterSpacing: 0.5 }}>
+            <p style={{ color: "#334155", fontSize: isMobile ? 9 : 13, marginTop: isMobile ? 4 : 10, letterSpacing: 0.5 }}>
               RAG-powered · LangChain + ChromaDB + Claude · Resume-grounded answers
             </p>
           </div>
 
-          <div style={{ width: "100%", maxWidth: 720, display: "flex", flexDirection: "column", animation: "fadeUp 0.6s ease 0.1s both" }}>
+          <div style={{ width: "100%", maxWidth: 720, minWidth: 0, display: "flex", flexDirection: "column", animation: "fadeUp 0.6s ease 0.1s both", padding: isMobile ? "0 12px" : 0 }}>
             {/* Messages */}
             <div style={{
               background: "rgba(10,14,22,0.95)",
               border: "1px solid rgba(248,197,100,0.1)",
               borderRadius: "16px 16px 0 0",
               padding: "20px 20px 12px",
-              height: isMobile ? "min(300px, 42vh)" : 380,
+              height: isMobile ? "calc(100vh - 52px - 220px)" : 380,
               overflowY: "auto",
             }}>
               {messages.map((msg, i) => (
@@ -442,12 +441,13 @@ export default function Portfolio() {
               border: "1px solid rgba(248,197,100,0.1)",
               borderTop: "1px solid rgba(20,28,42,0.9)",
               borderBottom: "none",
-              padding: "10px 14px",
+              padding: isMobile ? "10px 10px" : "10px 14px",
               display: "flex",
               flexWrap: isMobile ? "nowrap" : "wrap",
               gap: 6,
               overflowX: isMobile ? "auto" : "visible",
               scrollbarWidth: "none",
+              WebkitOverflowScrolling: "touch",
             }}>
               {SUGGESTIONS.map((q, i) => (
                 <button key={i} className="suggest" onClick={() => send(q)} disabled={loading} style={{
@@ -503,7 +503,7 @@ export default function Portfolio() {
           </div>
 
           {/* Contact strip */}
-          <div style={{ display: "flex", gap: 8, marginTop: 16, flexWrap: "wrap", justifyContent: "center", padding: "0 8px", animation: "fadeUp 0.7s ease 0.2s both" }}>
+          <div style={{ display: "flex", gap: 6, marginTop: isMobile ? 8 : 16, flexWrap: "wrap", justifyContent: "center", padding: "0 8px", animation: "fadeUp 0.7s ease 0.2s both" }}>
             {CONTACTS.map(c => (
               <a key={c.label} href={c.href} target="_blank" rel="noreferrer" style={{
                 display: "flex", alignItems: "center", gap: 7,
@@ -522,7 +522,7 @@ export default function Portfolio() {
             ))}
           </div>
 
-          <div style={{ marginTop: 16, fontSize: 10, color: "#1e293b", textAlign: "center" }}>
+          <div style={{ marginTop: isMobile ? 6 : 16, fontSize: 10, color: "#1e293b", textAlign: "center" }}>
             built with LangChain · ChromaDB · FastAPI · Claude
           </div>
         </main>
