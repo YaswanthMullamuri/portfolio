@@ -11,9 +11,8 @@ langchain-core>=0.2.38
 # Active LLM provider
 langchain-anthropic>=0.1.23
 
-# Embeddings (free, local — no API key needed for small corpora like a resume)
-langchain-huggingface>=0.0.3
-sentence-transformers>=3.0.0
+# Embeddings (OpenAI — cheap, only used for indexing)
+langchain-openai>=0.1.20
 
 # Vector store
 chromadb>=0.5.0

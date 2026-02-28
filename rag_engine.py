@@ -115,8 +115,10 @@ class RAGEngine:
         splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
         docs = splitter.create_documents([RESUME_CONTEXT])
 
-        # ── Step 1: Add your OpenAI key in .env (used only for embeddings, not generation) ──
-        embeddings = OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY"))
+        embeddings = OpenAIEmbeddings(
+            model="text-embedding-ada-002",
+            openai_api_key=os.getenv("OPENAI_API_KEY")
+        )
 
         self._vector_store = Chroma.from_documents(
             documents=docs,
