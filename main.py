@@ -19,8 +19,8 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
-    # allow_origins=["*"],  # Restrict to your portfolio domain in production
-    allow_origins=["https://portfolio-psi-seven-16.vercel.app/"],
+    allow_origins=["*"],  # Restrict to your portfolio domain in production
+    # allow_origins=["https://portfolio-psi-seven-16.vercel.app/"],
     allow_methods=["POST", "GET"],
     allow_headers=["*"],
 )
