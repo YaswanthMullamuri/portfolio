@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 
 // ── Backend URL — FastAPI running locally on port 8000 ────────────────────────
-const BACKEND_URL = "http://localhost:8000";
+// const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = "https://portfolio-y1i9.onrender.com";
 
 const SUGGESTIONS = [
   "What did he build at TCS?",
