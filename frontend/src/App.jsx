@@ -144,6 +144,7 @@ export default function Portfolio() {
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap');
+        html, body { max-width: 100%; overflow-x: hidden; }
         @keyframes bounce { 0%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-5px)} }
         @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
         @keyframes glow { 0%,100%{opacity:.6} 50%{opacity:1} }
@@ -353,17 +354,19 @@ export default function Portfolio() {
         {/* ── Chat ─────────────────────────────────────────────── */}
         <main style={{
           flex: 1,
+          minWidth: 0,
           marginLeft: !isMobile && panelOpen ? PANEL_WIDTH : 0,
           transition: "margin-left 0.35s cubic-bezier(0.4,0,0.2,1)",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: isMobile ? "8px 0 8px" : "24px 20px 20px",
+          padding: isMobile ? "8px 12px 8px" : "24px 20px 20px",
+          boxSizing: "border-box",
           minHeight: "calc(100vh - 52px)",
         }}>
 
-          <div style={{ textAlign: "center", marginBottom: isMobile ? 10 : 32, animation: "fadeUp 0.5s ease" }}>
+          <div style={{ textAlign: "center", marginBottom: isMobile ? 10 : 32, animation: "fadeUp 0.5s ease", width: "100%", boxSizing: "border-box" }}>
             <h1 style={{
               fontFamily: "Syne, sans-serif",
               fontSize: isMobile ? "22px" : "clamp(24px, 5vw, 52px)",
@@ -380,7 +383,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div style={{ width: "100%", maxWidth: 720, minWidth: 0, display: "flex", flexDirection: "column", animation: "fadeUp 0.6s ease 0.1s both", padding: isMobile ? "0 12px" : 0 }}>
+          <div style={{ width: "100%", maxWidth: 720, boxSizing: "border-box", display: "flex", flexDirection: "column", animation: "fadeUp 0.6s ease 0.1s both" }}>
             {/* Messages */}
             <div style={{
               background: "rgba(10,14,22,0.95)",
@@ -445,8 +448,9 @@ export default function Portfolio() {
               display: "flex",
               flexWrap: isMobile ? "nowrap" : "wrap",
               gap: 6,
-              overflowX: isMobile ? "auto" : "visible",
+              overflowX: "auto",
               scrollbarWidth: "none",
+              msOverflowStyle: "none",
               WebkitOverflowScrolling: "touch",
             }}>
               {SUGGESTIONS.map((q, i) => (
@@ -503,7 +507,7 @@ export default function Portfolio() {
           </div>
 
           {/* Contact strip */}
-          <div style={{ display: "flex", gap: 6, marginTop: isMobile ? 8 : 16, flexWrap: "wrap", justifyContent: "center", padding: "0 8px", animation: "fadeUp 0.7s ease 0.2s both" }}>
+          <div style={{ display: "flex", gap: 6, marginTop: isMobile ? 8 : 16, flexWrap: "wrap", justifyContent: "center", padding: "0 8px", animation: "fadeUp 0.7s ease 0.2s both", width: "100%", boxSizing: "border-box" }}>
             {CONTACTS.map(c => (
               <a key={c.label} href={c.href} target="_blank" rel="noreferrer" style={{
                 display: "flex", alignItems: "center", gap: 7,
