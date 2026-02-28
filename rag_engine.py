@@ -49,48 +49,163 @@ def _budget_exceeded(llm: str) -> bool:
 
 # ── Resume knowledge base ─────────────────────────────────────────────────────
 RESUME_CONTEXT = """
-Venkata Yaswanth Mullamuri is a Computer Science Master's student at NC State University (Aug 2024 – May 2026),
-specializing in Data Science, Software Security, Neural Networks, and AI Implementation. GPA: 3.4/4.0.
+Venkata Yaswanth Mullamuri is a graduate student pursuing a Master of Science in Computer Science
+at North Carolina State University (NC State), located in Raleigh, NC, USA. He started in August 2024
+and is expected to graduate in May 2026. His GPA is 3.4 out of 4.0. His coursework focuses on
+Data Science, Software Security, Independent Study in AI Implementation, and Neural Networks.
 
-He completed his B.Tech in Computer Science from SRM University, Chennai (2019–2023) with a perfect 4.0 GPA.
+Prior to his Master's, Yaswanth completed a Bachelor of Technology in Computer Science from
+SRM University in Chennai, India, from June 2019 to May 2023, graduating with a perfect GPA of 4.0
+out of 4.0. His undergraduate coursework included Data Structures and Algorithms, Computer Networks,
+and Network Security.
 
-CONTACT:
+CONTACT INFORMATION:
+- First Name: Venkata Yaswanth
+- Last Name: Mullamuri
+- Preferred First Name: Yaswanth
+- Phone: (919) 264-1489
 - Email: yaswanthmullamurijobs@gmail.com
 - LinkedIn: linkedin.com/in/yaswanth-mullamuri
 - GitHub: github.com/YaswanthMullamuri
-- Phone: (919) 264-1489
 - Location: Raleigh, NC, USA
 
-SKILLS:
-- Programming: Java, Python, C++, JavaScript, Dart
-- AI/ML: RAG, LLM, MCP, OpenAI, HuggingFace, LangChain, Ollama, ChromaDB, Numpy, Pandas, Matplotlib
-- Backend: SpringBoot, REST, Microservices, Kafka, Maven, Docker, Kubernetes, Azure, AWS
-- Security: SAST, DAST, IAST, OWASP Top 10, ASVS, GDPR, NIST, ZAP, Snyk, SonarQube, Threat Modelling
+TECHNICAL SKILLS:
+
+Programming Languages:
+Yaswanth is proficient in Java, Python, C++, JavaScript, and Dart. He has used Java extensively
+for backend development at TCS, Python for machine learning and AI projects, and JavaScript for
+full-stack development.
+
+AI and Machine Learning:
+Yaswanth has hands-on experience with Retrieval Augmented Generation (RAG), Agentic Systems,
+Large Language Models (LLM), Model Context Protocol (MCP), OpenAI APIs, HuggingFace, LangChain,
+Ollama, and Matplotlib. He has built production RAG pipelines using LangChain and ChromaDB,
+and worked with local LLM inference using Ollama and Llama 3.1.
+
+Technology and Frameworks:
+He is skilled in SpringBoot, REST APIs, MicroServices architecture, Maven, New Relic for monitoring,
+Docker for containerization, and Kubernetes for orchestration. He has deployed microservices on
+Azure AKS with zero-downtime rollout strategies.
+
+Databases and Cloud:
+Yaswanth has experience with AWS, Azure, MySQL, MongoDB, SQLite, and ChromaDB. He has used
+ChromaDB as a vector store for RAG systems and worked with relational and NoSQL databases in
+production environments.
+
+Security Tools and Practices:
+He is knowledgeable in SAST (Static Application Security Testing), DAST (Dynamic Application
+Security Testing), IAST (Interactive Application Security Testing), OWASP Top 10, ASVS
+(Application Security Verification Standard), GDPR, NIST frameworks, ZAP, Snyk, SonarQube,
+Threat Modelling, and Incident Response.
+
+Other Tools:
+Linux, Swagger, Kafka, Azure DevOps, Large Language Models, Retrieval Augmented Generation.
 
 WORK EXPERIENCE:
-1. Research Engineer — Secure Computing Institute, NC State (Aug 2025 – Present)
-   - Built RAG system using Llama 3.1 to automate P-SSCRM-scored assessments, achieving 5x efficiency gain
-   - Developed evidence-seeking prompts increasing assessment clarity by 25%
-   - Evaluated LLM-as-a-judge scoring: cut evaluation time 40%, reduced discrepancies 30%
-   - Privacy-first design: all inference runs locally on-device
 
-2. Software Engineer — Tata Consultancy Services (Aug 2023 – July 2024)
-   - Led backend services of global ordering system in 50+ countries, 100K+ daily orders, 200+ hubs
-   - 99.99% uptime with Spring Boot microservices on Azure
-   - Kafka pipelines: 50K+ records/day, latency -35%, throughput +50%
-   - 20+ RESTful APIs across 6+ microservices, 90%+ test coverage (JUnit, Mockito)
-   - Docker + Kubernetes (AKS): zero-downtime rollouts, auto-scaling for 3x peak traffic
-   - Cut engineer onboarding time by 80% via Confluence documentation
+Position 1: AI Engineer at North Carolina State University
+Duration: August 2025 to Present
+Location: Raleigh, NC, USA
 
-3. Machine Learning Mentee — Amazon (July–Aug 2022)
-   - Intensive ML/AI modules; built classifiers and sequence models in Python
-   - Delivered projects on model selection and error analysis
+In this role, Yaswanth is working as an AI Engineer at NC State University. He built a RAG-based
+system using the Llama 3.1 model to automate P-SSCRM-scored security assessments. This system
+replaced a 100% manual process and is targeting a 5x efficiency gain in security review cycles.
+The RAG pipeline retrieves relevant knowledge and generates structured assessments automatically,
+dramatically reducing the time security analysts spend on each review.
+
+He developed evidence-seeking prompts that guide users toward providing detailed, non-binary
+responses instead of simple yes/no answers. This enhanced the depth of assessments and increased
+clarity of responses by 25%. The system is designed with a privacy-first approach, ensuring all
+data and inference remains local to build user trust and maintain confidentiality.
+
+Yaswanth evaluated LLM-as-a-judge scoring methods to automate the scoring of security assessment
+responses. This reduced average human evaluation time by 40% and lowered scoring discrepancies
+between different evaluators by 30%. All inference runs on local systems to maintain privacy.
+
+He is also building a scalable prompt and knowledge base for assessor-style question and answer
+interactions. This work targets a 35% improvement in assessment accuracy and a 30% reduction in
+response latency. The knowledge base is curated specifically for secure, client-side deployment
+so sensitive data never leaves the user's environment.
+
+Position 2: Software Engineer at Tata Consultancy Services (TCS)
+Duration: August 2023 to July 2024
+Location: Chennai, India
+
+At TCS, Yaswanth worked as a Software Engineer on a large-scale global ordering system. This
+system is used in over 50 countries, processes more than 100,000 daily orders, and operates
+across more than 200 hubs worldwide. He was responsible for backend development using Spring Boot
+microservices deployed on Microsoft Azure, maintaining 99.99% uptime for a mission-critical system.
+
+He built scalable data pipelines using Apache Kafka and Java to process over 50,000 records per day.
+These pipelines reduced data processing latency by 35% and increased overall throughput by 50%,
+making the ordering system significantly more efficient at scale.
+
+Yaswanth developed over 20 RESTful APIs using Spring Boot across more than 6 microservices. He
+achieved over 90% test coverage using JUnit and Mockito, which reduced post-release defects by 40%.
+This high test coverage ensured reliability and stability of the APIs in production.
+
+He significantly improved developer productivity by revamping Confluence documentation for the team.
+This reduced onboarding time for new engineers by 80% and involved logging 100% of recurring
+incidents and blockers for over 10 new engineers every year, making knowledge transfer seamless.
+
+Yaswanth deployed microservices using Docker and Kubernetes on Azure AKS (Azure Kubernetes Service).
+His deployment strategy enabled zero-downtime rollouts and auto-scaling capabilities that handled
+up to 3x peak traffic during high demand periods without any service degradation.
+
+Position 3: Machine Learning Mentee at Amazon
+Duration: July 2022 to August 2022
+Location: Chennai, India
+
+Yaswanth completed an intensive mentorship program at Amazon focused on machine learning and
+artificial intelligence. He completed modules covering core ML and AI concepts and built
+classifiers and sequence models using Python. He delivered small projects demonstrating model
+selection strategies and error analysis techniques.
 
 PROJECTS:
-- Security Analyst on OpenEMR (Open Source Healthcare App):
-  - Conducted SAST, DAST, IAST security assessments (OWASP Top 10 focus)
-  - Enforced 12-character password policy: entropy +40%, credential risk -30%
-  - Aligned with ASVS and GDPR standards
+
+Project: Security Analyst on OpenEMR Web Application
+Yaswanth collaborated with OpenEMR, an open source healthcare web application, to conduct
+comprehensive security assessments. He used advanced methodologies including SAST (Static
+Application Security Testing), DAST (Dynamic Application Security Testing), and IAST (Interactive
+Application Security Testing), with a strong focus on OWASP Top 10 vulnerabilities.
+
+He ensured the application aligned with ASVS (Application Security Verification Standard) and
+GDPR (General Data Protection Regulation) standards. He identified and addressed a critical
+ASVS compliance gap by enforcing a 12-character minimum password policy across the application.
+This change increased password strength entropy by 40% and reduced credential-related security
+risks by 30%, significantly improving the application's overall security posture.
+
+Project: Local AI Assistant using Ollama and LangChain
+Yaswanth built a fully local AI assistant that runs entirely on-device without any external API
+calls or internet connectivity. The assistant is powered by Ollama for local LLM inference and
+LangChain for conversation management and retrieval logic. The motivation behind this project was
+to explore privacy-preserving AI — building a capable chatbot that never sends user data to
+external servers, making it suitable for sensitive personal or professional use cases.
+
+The assistant supports multi-turn conversations with memory, meaning it retains context across
+multiple exchanges in a session. Yaswanth integrated a local ChromaDB vector store so the assistant
+can answer questions grounded in personal documents — essentially a personal RAG system running
+fully offline. He experimented with multiple Ollama-supported models including Llama 3.1, Mistral,
+and Phi-3, comparing their response quality and latency on consumer hardware.
+
+This project deepened his understanding of how local inference differs from cloud-based LLM APIs
+in terms of latency, quantization tradeoffs, and memory constraints. It also gave him practical
+experience optimizing prompts for smaller, locally-run models which behave differently from
+large cloud-hosted models like GPT-4 or Claude.
+
+CAREER GOALS AND INTERESTS:
+Yaswanth is actively seeking opportunities in AI Engineering, Machine Learning Engineering,
+Software Engineering, and Security Engineering. He is passionate about building intelligent
+systems that combine the power of LLMs with retrieval-based architectures (RAG), and is
+particularly interested in privacy-preserving AI systems and secure software development.
+He is open to full-time roles starting May 2026 upon completion of his Master's degree,
+and is also open to internship opportunities.
+
+HOW TO REACH YASWANTH:
+Recruiters and hiring managers can reach Yaswanth at yaswanthmullamurijobs@gmail.com or
+by calling (919) 264-1489. His LinkedIn profile is linkedin.com/in/yaswanth-mullamuri and
+his GitHub is github.com/YaswanthMullamuri. He is based in Raleigh, NC and is open to
+both local and remote opportunities.
 """
 
 SYSTEM_PROMPT = """You are Yaswanth's portfolio assistant — a professional AI that answers recruiter
